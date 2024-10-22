@@ -1,0 +1,4 @@
+__pycache__
+/fast_api/.venv
+/react/node_modules
+/react/package-lock.json
