@@ -36,7 +36,7 @@ async def login(request: Request, db: Session = Depends(get_db)):
 
 @router.get("/user")
 def get_user(request: Request):
-    return { "name": "admin", "menu": get_menu(get_user_roles(request.state.user["id"])) }
+    return { "name": request.state.user["name"], "menu": get_menu(get_user_roles(request.state.user["id"])) }
 
 @router.get("/logout")
 def logout():
